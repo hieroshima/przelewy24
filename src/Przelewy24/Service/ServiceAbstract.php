@@ -8,7 +8,7 @@ namespace Przelewy24\Service;
 
 abstract class ServiceAbstract implements ServiceInterface
 {
-    const P24_SERVICE = 'classic';
+    const P24_SERVICE = 'przelewy24';
     const P24_SERVICE_SMS = 'sms';
 
     /**

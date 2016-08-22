@@ -20,7 +20,7 @@ final class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(
             'Przelewy24\\Service\\Przelewy24',
-            ServiceFactory::create($auth, $env, 'classic')
+            ServiceFactory::create($auth, $env, 'przelewy24')
         );
     }
 
@@ -43,7 +43,7 @@ final class ServiceTest extends \PHPUnit_Framework_TestCase
         $env = EnvironmentFactory::create('sandbox');
         $auth = new SmsAuth();
 
-        ServiceFactory::create($auth, $env, 'classic');
+        ServiceFactory::create($auth, $env, 'przelewy24');
     }
 
     /**
@@ -65,6 +65,6 @@ final class ServiceTest extends \PHPUnit_Framework_TestCase
         $env = EnvironmentFactory::create('sandbox');
         $auth = new SmsAuth();
 
-        ServiceFactory::create($auth, $env, 'przelewy24');
+        ServiceFactory::create($auth, $env, 'test');
     }
 }

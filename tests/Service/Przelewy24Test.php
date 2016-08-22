@@ -17,8 +17,8 @@ final class Przelewy24Test extends \PHPUnit_Framework_TestCase
     {
         $env = EnvironmentFactory::create('sandbox');
         $auth = new ClassicAuth();
-        $p24 = ServiceFactory::create($auth, $env, 'classic');
+        $p24 = ServiceFactory::create($auth, $env, 'przelewy24');
 
-        $this->assertEquals('classic', $p24->getServiceType());
+        $this->assertEquals('przelewy24', $p24->getServiceType());
     }
 }
